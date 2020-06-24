@@ -4,7 +4,7 @@
 import time # needed to delay x seconds between checks
 import sonos_user_data # the api which pulls the lastfm data
 import sys # needed to pull command line arguments
-import ink_printer # does the printing to ink
+import waveshare_printer as ink_printer # does the printing to ink
 
 import sonos_settings
 import demaster
@@ -81,7 +81,7 @@ while True:
             if sleep_mode_sleeping == False:
                 # set the screen depending on settings
                 if sleep_mode_output == "logo":
-                    ink_printer.show_image('/home/pi/music-screen-api/sonos-inky.png')                
+                    ink_printer.show_image('/home/pi/SonosScreen/sonos-inky.png')
                 else:
                     ink_printer.blank_screen()
             
